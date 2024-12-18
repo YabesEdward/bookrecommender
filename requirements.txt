@@ -1,0 +1,10 @@
+### dependency
+Flask==2.2.5
+gunicorn==20.1.0
+
+streamlit
+numpy
+rapidfuzz
+
+### local packages -
+-e . 
