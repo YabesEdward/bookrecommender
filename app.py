@@ -7,6 +7,8 @@ from rapidfuzz import process
 import os  
 
 import os
+from sklearnex import patch_sklearn
+patch_sklearn()  # Memastikan scikit-learn menggunakan prebuilt binary
 
 # Menggunakan path relatif
 artifacts_path = os.path.join(os.path.dirname(__file__), 'artifacts')
