@@ -6,14 +6,17 @@ from sklearn.metrics.pairwise import cosine_similarity
 from rapidfuzz import process
 import os  
 
-# Load Data
-artifacts_path = '/Users/arvindewonoto/socs/BookRecommender/artifacts'
+import os
 
-# Memuat file pickle
+# Menggunakan path relatif
+artifacts_path = os.path.join(os.path.dirname(__file__), 'artifacts')
+
+# Load file pickle
 final_rating = pickle.load(open(os.path.join(artifacts_path, 'final_rating.pkl'), 'rb'))
 model = pickle.load(open(os.path.join(artifacts_path, 'model.pkl'), 'rb'))
 book_names = pickle.load(open(os.path.join(artifacts_path, 'book_names.pkl'), 'rb'))
 book_pivot = pickle.load(open(os.path.join(artifacts_path, 'book_pivot.pkl'), 'rb'))
+
 
 # Pendahuluan
 st.title("Selamat Datang di Sistem Rekomendasi Buku 📚")
