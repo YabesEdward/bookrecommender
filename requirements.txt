@@ -1,14 +1,9 @@
-### dependency
+streamlit==1.30.0
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.2.2
+rapidfuzz==3.0.0
 Flask==2.2.5
 gunicorn==20.1.0
 
-
-
-streamlit
-numpy
-pandas
-scikit-learn
-rapidfuzz
-
-### local packages -
--e . 
+python>=3.8,<3.11
